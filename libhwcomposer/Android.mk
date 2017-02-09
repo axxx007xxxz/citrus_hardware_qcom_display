@@ -25,6 +25,9 @@ ifeq ($(VSYNC_EVENT_PHASE_OFFSET_NS),)
 endif
 
 LOCAL_ADDITIONAL_DEPENDENCIES := $(common_deps)
+LOCAL_C_INCLUDES += $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr/include
+LOCAL_ADDITIONAL_DEPENDENCIES += $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr
+
 LOCAL_SRC_FILES               := hwc.cpp          \
                                  hwc_utils.cpp    \
                                  hwc_uevents.cpp  \

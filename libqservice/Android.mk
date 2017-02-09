@@ -8,6 +8,8 @@ LOCAL_C_INCLUDES              := $(common_includes) $(kernel_includes)
 LOCAL_SHARED_LIBRARIES        := $(common_libs) libbinder
 LOCAL_CFLAGS                  := $(common_flags) -DLOG_TAG=\"qdqservice\"
 LOCAL_ADDITIONAL_DEPENDENCIES := $(common_deps)
+LOCAL_C_INCLUDES += $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr/include
+LOCAL_ADDITIONAL_DEPENDENCIES += $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr
 LOCAL_SRC_FILES               := QService.cpp \
                                  IQService.cpp \
                                  IQClient.cpp

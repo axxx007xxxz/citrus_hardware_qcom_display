@@ -9,6 +9,8 @@ LOCAL_SHARED_LIBRARIES        := $(common_libs) libqdutils libmemalloc \
                                  libsync libdl
 LOCAL_CFLAGS                  := $(common_flags) -DLOG_TAG=\"qdoverlay\"
 LOCAL_ADDITIONAL_DEPENDENCIES := $(common_deps)
+LOCAL_C_INCLUDES += $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr/include
+LOCAL_ADDITIONAL_DEPENDENCIES += $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr
 LOCAL_SRC_FILES := \
       overlay.cpp \
       overlayUtils.cpp \
